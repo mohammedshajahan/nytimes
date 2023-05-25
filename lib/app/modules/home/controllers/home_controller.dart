@@ -9,8 +9,6 @@ import '../../../network/network.dart';
 import '../../../network/response.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
   final count = 0.obs;
   bool? isLoading = true;
   MostViewedModel? mostViewedModel;
@@ -25,10 +23,6 @@ class HomeController extends GetxController {
       CustomeResponse? response = await apiBaseHelper.request(
         url:
             "https://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=l9wIFHZ94o53agw31CVM8XI6JdWCmwqK",
-
-        // "${Helpers.get_most_viewed}/"
-        //     "all-sections/7.json?"
-        //     "${Helpers.apikey}",
         method: HTTPMETHOD.GET,
       );
 
@@ -37,7 +31,6 @@ class HomeController extends GetxController {
         mostViewedList = responseData
             .map<MostViewedModel>((json) => MostViewedModel.fromMap(json))
             .toList();
-        // mostViewedModel = MostViewedModel.fromMap(response.data);
         isLoading = false;
         update();
         return true;
@@ -61,3 +54,7 @@ class HomeController extends GetxController {
   void onClose() {}
   void increment() => count.value++;
 }
+
+ // "${Helpers.get_most_viewed}/"
+        //     "all-sections/7.json?"
+        //     "${Helpers.apikey}",

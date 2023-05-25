@@ -47,8 +47,9 @@ class HomedetailsView extends GetView {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(
-                          data?.media?.first.mediaMetadata![2].url ?? ""))),
+                      image: NetworkImage(data
+                              ?.media?.first.mediaMetadata![2].url ??
+                          "https://library.northwestu.edu/wp-content/uploads/2019/06/nytimes.png"))),
             ),
             Text(
               data?.media?.first.copyright ?? "",

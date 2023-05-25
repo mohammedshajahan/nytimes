@@ -78,12 +78,12 @@ class ApiBaseHelper {
         default:
       }
 
-      final resMessage = response?.data is Map ? response?.data["message"] : "";
+      // final resMessage = response?.data is Map ? response?.data["message"] : "";
       final resData = response?.data is Map ? response?.data["results"] : "";
 
       return CustomeResponse(
         success: true,
-        message: resMessage,
+        // message: resMessage,
         data: resData,
         fullResponse: response,
       );

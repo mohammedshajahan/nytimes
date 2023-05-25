@@ -7,7 +7,7 @@ PeopleFirst Mobile application for Android and IOS ,built with Flutter cross-pla
 build project using fluter 3.3.3
 
 ### Project apk for android can be downloaded directly from below link valid till 24th June 2023
-https://easyupload.io/pwsulj
+https://easyupload.io/pjl787
 
 
 ## Getting Started with Flutter

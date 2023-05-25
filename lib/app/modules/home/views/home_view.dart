@@ -56,8 +56,8 @@ class HomeView extends GetView<HomeController> {
         controller.getMostViewed();
       }, builder: (controller) {
         return controller.isLoading!
-            ? Center(
-                child: CircularProgressIndicator(color: Colors.red),
+            ? const Center(
+                child: CircularProgressIndicator(color: primaryColor),
               )
             : ListView.builder(
                 itemCount: controller.mostViewedList!.length,
